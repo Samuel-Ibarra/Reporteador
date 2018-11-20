@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="src/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-  <script type="text/javascript" src="src/js/home.js?v1"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+  <!-- css -->
+  <link href="src/css/menu.css" rel="stylesheet">
+  <link href="src/css/bootstrap.min.css" rel="stylesheet">
   </head>
 
 <body>
@@ -15,50 +15,80 @@
   <div class="container">
     <h2>Your weekly Work Order report</h2>
 
-    <div class="panel panel-default">
-      <div class="panel-heading">Open Work Order Status</div>
-      <div class="panel-body">
-      <div id="columnchart_material" style="width: 600px; height: 300px;"></div>
+  <div class = "row">
+    <div class="col">
+      <div class="card">
+        <div class="card-header">Open Work Order Status</div>
+        <div class="card-body">
+        <div id="columnchart_material" class="charts"></div>
+        </div>
       </div>
-    </div>
 
-    <div class="panel panel-default">
-      <div class="panel-heading">Open Work Order Status</div>
-      <div class="panel-body">
-        <div id="piechartwopenstatus_3d" style="width: 600px; height: 300px;"></div>
+      <div class="card">
+        <div class="card-header">Open Work Order Status</div>
+        <div class="card-body">
+          <div id="piechartwopenstatus_3d"></div>
+        </div>
       </div>
-    </div>
 
-    <div class="panel panel-default">
-      <div class="panel-heading">Open WO Age</div>
-      <div class="panel-body">
-        <div id="piechartwoage_3d" style="width: 600px; height: 300px;"></div>
+      <div class="card">
+        <div class="card-header">Open WO Age</div>
+        <div class="card-body">
+          <div id="piechartwoage_3d"></div>
+        </div>
       </div>
-    </div>
 
-    <div class="panel panel-default">
-      <div class="panel-heading">Past 30 Days Closed Count</div>
-      <div class="panel-body">
-        <div id="piechartwo30d_3d" style="width: 700px; height: 400px;"></div>
+      <div class="card">
+        <div class="card-header">Past 30 Days Closed Count</div>
+        <div class="card-body">
+          <div id="piechartwo30d_3d"></div>
+        </div>
       </div>
-    </div>
 
-    <div class="panel panel-default">
-      <div class="panel-heading">Open WOs Count</div>
-      <div class="panel-body">
-        <div id="piechartwoopencount_3d" style="width: 700px; height: 400px;"></div>
+      <div class="card">
+        <div class="card-header">Open WOs Count</div>
+        <div class="card-body">
+          <div id="piechartwoopencount_3d"></div>
+        </div>
       </div>
-    </div>
 
-    <div class="panel panel-default">
-      <div class="panel-heading">DevOps Backlog Hours</div>
-      <div class="panel-body">
-        <div id="DevOpscolumnchart_values" style="width: 600px; height: 400px;"></div>
-      </div>
     </div>
+    <div class="col">
+      <a  class="float" id="menu-share">
+        <i class="fa fa-navicon my-float"></i>
+      </a>
+      <ul>
+        <li><a href="#">
+            <i class="fa fa-pie-chart my-float"></i></a>
+        </li>
+        <li><a href="#">
+          <i class="fa fa-bar-chart my-float"></i>
+        </a></li>
+        <li><a href="#">
+          <i class="fa fa-file-pdf-o my-float"></i>
+        </a></li>
+        <li><a href="#">
+          <i class="fa fa-folder-open-o my-float"></i>
+        </a></li>
+        <li><a href="#">
+          <i class="fa fa-share-alt my-float"></i>
+        </a></li>
+        <li><a href="#">
+          <i class="fa fa-sign-in my-float"></i>
+        </a></li>
+      </ul>
 
+    </div>
   </div>
+</div>
 
+  <!-- SCRIPTS -->
+  <!-- JQuery -->
+  <script type="text/javascript" src="src/js/jquery-3.3.1.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="src/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript" src="src/js/home.js?v1"></script>
 
 </body>
 

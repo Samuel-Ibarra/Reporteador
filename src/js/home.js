@@ -1,4 +1,12 @@
 
+function trunc (x, posiciones = 0) {
+  var s = x.toString()
+  var l = s.length
+  var decimalLength = s.indexOf('.') + 1
+  var numStr = s.substr(0, decimalLength + posiciones)
+  return Number(numStr)
+}
+
 
 window.onload = function() {
 
@@ -14,7 +22,6 @@ fetch('./api/Reporte/all.php')
 .then(function(response) {
    if (response.status===200) {
 
-     console.log(response)
  // Do stuff with the response
 response.json().then(function updateFromOnline(data) {
 
@@ -158,43 +165,8 @@ function drawChart() {
     ['Randolph Reyes', 1],
   ]);
 
-  var datadevopsbackloghours = google.visualization.arrayToDataTable([
-    ["BacklogHours", "Backlog Hours", {
-      role: "style"
-    }],
-    ["4-Mar", 1399, "#005273"],
-    ["17-Mar", 1422, "#005273"],
-    ["30-Mar", 1654, "#005273"],
-    ["12-Apr", 1766, "#005273"],
-    ["21-May", 2455, "#005273"],
-    ["2-June", 3500, "#005273"],
-    ["21-May", 4500, "#005273"],
-    ["3-Sep", 4677, "#005273"],
-    ["15-Sep", 3800, "#005273"],
-  ]);
+  
 
-  var view = new google.visualization.DataView(datadevopsbackloghours);
-  view.setColumns([0, 1, {
-      calc: "stringify",
-      sourceColumn: 1,
-      type: "string",
-      role: "annotation"
-    },
-    2
-  ]);
-  var optiondevopsbackloghours = {
-    title: "DevOps Backlog Hours",
-    width: 800,
-    height: 400,
-    bar: {
-      groupWidth: "90%"
-    },
-    legend: {
-      position: "none"
-    }
-  };
-  var chartoptiondevopsbackloghours = new google.visualization.ColumnChart(document.getElementById("DevOpscolumnchart_values"));
-  chartoptiondevopsbackloghours.draw(view, optiondevopsbackloghours);
 
 
 
